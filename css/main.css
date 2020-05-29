@@ -23,12 +23,11 @@
         font-family: Helvetica Neue LT Std;
         color: white;
         left: 25px;
+        margin-top: 25px;
         font-style: normal;
         font-weight: bold;
         font-size: 120px;
         line-height: 95%;
-        border: 1px solid yellow;
-
       }
 
       h2{
@@ -54,8 +53,7 @@
       .container{
         margin-top: 0px;
         width: 100%;
-        max-height: 900px;
-        border: 2px solid red;
+        height: 1000px;
         display: grid;
         grid-template-columns: 20% 20% 20% 20% 20%;
         grid-template-rows: 25% 25% 25% 25%;
@@ -70,47 +68,97 @@
       }
 
       .item-header{
-        grid-area:  1/1/2/4;
+        grid-area: 1/1/2/4;
       }  
 
       .item-red-badge{
-        grid-area: 3/2/4/3;
-        cursor: move;
+        grid-area: 3/1/4/2;
       }
 
-      /* start image animation */
-
-      .div-img {
-         max-width:100px; /*width of your image*/
-         margin:0; /* If you want no margin */
-         padding:0; /*if your want to padding */
-      }
-
-
-
-      /* start - not used right now*/
-      .img-splashscreen{
-        width: 300px;
+      .item-red-badge-animation{
         animation-name: infinite-spinning;
         animation-duration: 60s;
         animation-iteration-count: infinite;
-        transform-origin: center center;
-        border: 1px solid yellow;
-    
-      #object-red {
-        margin-left: 100px;
-        margin-top: 100px;
-        position: absolute;
+        animation-timing-function: linear;
+        transform-origin: center;
       }
 
-      #object-silver {
-        width: 100px;
-        margin-left: 100px;
-        margin-top: 0px;
-        position: absolute;
+      .item-grey-badge{
+        grid-area: 1/4/2/5;
       }
 
+      .item-grey-badge-animation{
+        animation-name: infinite-spinning;
+        animation-duration: 90s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        transform-origin: center;
+      }
 
+      .item-yellow-badge{
+        grid-area: 2/5/3/6;
+      }
+
+      .item-yellow-badge-animation{
+        animation-name: infinite-spinning;
+        animation-duration: 45s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease;
+        transform-origin: center;
+      }
+
+      .item-token-1{
+        grid-area: 3/3/5/6;
+      }
+
+      .item-token-1-animation{
+        animation-name: infinite-spinning;
+        animation-duration: 80s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease;
+        transform-origin: center;        
+      }
+
+      .item-metro-1{
+        grid-area: 1/2/3/6;  
+      }
+
+      .item-metro-1-animation{
+      transform-origin: 200% center; 
+      position:relative; 
+      animation: rotate 10s linear infinite; 
+      }
+
+      item-metro-1-animation:before { 
+      content:''; 
+      position: absolute; 
+      animation: rotate 10s linear reverse infinite; 
+      }
+
+      .item-metro-2{
+        grid-area:3/4/5/6;  
+      }
+
+      .item-metro-2-animation { 
+      margin-top: 150px;
+      transform-origin: 200% center; 
+      position:relative; 
+      animation: rotate 40s linear infinite; 
+      }
+
+      item-metro-2-animation:before { 
+      content:''; 
+      position: absolute; 
+      animation: rotate 40s linear reverse infinite; 
+      }
+
+      @keyframes rotate { 
+        100% { 
+        transform:rotate(-360deg); 
+        } 
+      }
+
+       
       @keyframes infinite-spinning {
         from {
         transform: rotate(0deg);
@@ -119,8 +167,24 @@
         transform: rotate(360deg);
           }
         }
-         }
-      /* end - not use right now */
+
+
+        @keyframes beat {
+          from {
+          transform: scale(1);
+          }
+          to {
+            transform: scale(0.4);
+          }
+        }
+
+      /* start image animation */
+
+      .div-img {
+         max-width:100px; /*width of your image*/
+         margin:0; /* If you want no margin */
+         padding:0; /*if your want to padding */
+      }
 
 
 
