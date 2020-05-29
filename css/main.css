@@ -103,7 +103,7 @@
         animation-name: infinite-spinning;
         animation-duration: 45s;
         animation-iteration-count: infinite;
-        animation-timing-function: ease;
+        animation-timing-function: linear;
         transform-origin: center;
       }
 
