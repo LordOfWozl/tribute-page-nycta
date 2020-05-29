@@ -1,0 +1,158 @@
+/*! HTML5 Boilerplate v7.1.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 1.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+ 
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+      #title {
+      }
+
+      body{
+        background-color: black;
+      }
+
+      h1{
+        font-family: Helvetica Neue LT Std;
+        color: white;
+        left: 25px;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 120px;
+        line-height: 95%;
+        border: 1px solid yellow;
+
+      }
+
+      h2{
+        font-family: Helvetica Neue LT Std;
+        color: white;
+        height: 56px;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 70px;
+        line-height: 110%;
+        text-align: center;
+      }
+
+      p{
+        font-family: Helvetica Neue LT Std;
+        color: white;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 160%;
+      }
+
+      .container{
+        margin-top: 0px;
+        width: 100%;
+        max-height: 900px;
+        border: 2px solid red;
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+        grid-template-rows: 25% 25% 25% 25%;
+        grid-gap: 10px;
+        grid-template-areas: 
+        "header header header header header"
+        "content content content content content"
+        "content content content content content"
+        "content content content content content"
+        "content content content content content"
+
+      }
+
+      .item-header{
+        grid-area:  1/1/2/4;
+      }  
+
+      .item-red-badge{
+        grid-area: 3/2/4/3;
+        cursor: move;
+      }
+
+      /* start image animation */
+
+      .div-img {
+         max-width:100px; /*width of your image*/
+         margin:0; /* If you want no margin */
+         padding:0; /*if your want to padding */
+      }
+
+
+
+      /* start - not used right now*/
+      .img-splashscreen{
+        width: 300px;
+        animation-name: infinite-spinning;
+        animation-duration: 60s;
+        animation-iteration-count: infinite;
+        transform-origin: center center;
+        border: 1px solid yellow;
+    
+      #object-red {
+        margin-left: 100px;
+        margin-top: 100px;
+        position: absolute;
+      }
+
+      #object-silver {
+        width: 100px;
+        margin-left: 100px;
+        margin-top: 0px;
+        position: absolute;
+      }
+
+
+      @keyframes infinite-spinning {
+        from {
+        transform: rotate(0deg);
+          }
+        to {
+        transform: rotate(360deg);
+          }
+        }
+         }
+      /* end - not use right now */
+
+
+
+      /* end image animation */
+
+      .div-text {
+        display: center;
+        text-align: left;
+        
+      }
+      
+
+      @media screen and (min-width: 300px) and (max-width: 800px) { 
+        .div-text {
+          margin-left: 5%;
+          margin-right: 5%;
+          border: 1px solid green;
+          } 
+        } 
+
+      @media screen and (min-width: 801px) and (max-width: 1400px) { 
+        .div-text {
+          margin-left: 20%;
+          margin-right: 20%;
+          border: 1px solid blue;
+          } 
+        }
+
+      @media screen and (min-width: 1401px) { 
+        .div-text {
+          margin-left: 30%;
+          margin-right: 30%;
+          border: 1px solid yellow;
+          } 
+        }
