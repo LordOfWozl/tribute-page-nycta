@@ -1,18 +1,4 @@
-/*! HTML5 Boilerplate v7.1.0 | MIT License | https://html5boilerplate.com/ */
 
-/* main.css 1.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
-/*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
-
- 
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
-      /* start code for freecodecamp*/
-     
 @font-face {
     font-family: 'Helvetica Neue LT Std';
     src: url('../fonts/HelveticaNeueLTStd-Roman.woff2') format('woff2'),
@@ -45,10 +31,30 @@
 }
 
 #img-div {
-  display: center;
   text-align: center;
 }
 
+#image {
+width: 100%;
+height: auto;
+max-width: 625px;
+margin-left: auto;
+margin-right: auto;
+display: block;
+}
+
+
+/* for codecamp
+#image {
+width: 100%;
+height: auto;
+max-width: 625px;
+margin-left: auto;
+margin-right: auto;
+display: block;
+}
+
+my version:;
 #image {
   width: 100%;
   max-width: 900px;
@@ -57,6 +63,7 @@
   padding-top: 90px;
   padding-bottom: 50px;
 }
+*/
 
 #img-caption{
 }
@@ -86,7 +93,7 @@ h1{
   font-family: Helvetica Neue LT Std, Helvetica;
   color: white;
   margin-left: 25px;
-  margin-top: 12px;
+  margin-top: 25px;
   font-style: normal;
   font-weight: bold;
   font-size: 120px;
