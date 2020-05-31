@@ -12,239 +12,302 @@
    Base styles: opinionated defaults
    ========================================================================== */
       /* start code for freecodecamp*/
-      #title {
-      }
+     
+@font-face {
+    font-family: 'Helvetica Neue LT Std';
+    src: url('../fonts/HelveticaNeueLTStd-Roman.woff2') format('woff2'),
+        url('../fonts/HelveticaNeueLTStd-Roman.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
-      #main{
-      }
+@font-face {
+    font-family: 'Helvetica Neue LT Std';
+    src: url('../fonts/HelveticaNeueLTStd-Bd.woff2') format('woff2'),
+        url('../fonts/HelveticaNeueLTStd-Bd.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
 
-      /*end code for freecodecamp*/
-
-      body{
-        background-color: black; 
-        overflow-x: hidden;
-      }
-
-      h1{
-        font-family: Helvetica Neue LT Std;
-        color: white;
-        margin-left: 12px;
-        margin-top: 12px;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 120px;
-        line-height: 95%;
-        text-shadow: rgb(0,0,0,0.5) 1px 0 15px;
-
-      }
-
-      h2{
-        font-family: Helvetica Neue LT Std;
-        color: white;
-        height: 56px;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 70px;
-        line-height: 110%;
-        text-align: center;
-      }
-
-      p{
-        font-family: Helvetica Neue LT Std;
-        color: white;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 160%;
-      }
-
-      .div-text {
-        display: center;
-        text-align: left;
-        
-      }
+@font-face {
+    font-family: 'Helvetica Neue LT Std';
+    src: url('../fonts/HelveticaNeueLTStd-Md.woff2') format('woff2'),
+        url('../fonts/HelveticaNeueLTStd-Md.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
 
 
-    /* start responsive */
+#title {
+}
 
-      @media screen and (min-width: 300px) and (max-width: 800px) { 
-        .div-text {
-          margin-left: 5%;
-          margin-right: 5%;
-          border: 1px solid green;
-          } 
-        } 
+#main{
+}
 
-      @media screen and (min-width: 801px) and (max-width: 1400px) { 
-        .div-text {
-          margin-left: 20%;
-          margin-right: 20%;
-          border: 1px solid blue;
-          } 
-        }
+#img-div {
+  display: center;
+  text-align: center;
+}
 
-      @media screen and (min-width: 1401px) { 
-        .div-text {
-          margin-left: 30%;
-          margin-right: 30%;
-          border: 1px solid yellow;
-          } 
-        }
+#image {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  display: center;
+  padding-top: 90px;
+  padding-bottom: 50px;
+}
 
-    /* end responsive */
+#img-caption{
+}
 
+#tribute-info{   
+}
 
-    /* start navigation */
-
-      nav{
-        position: fixed;
-        margin-top: calc(100vh - 200px);
-        max-width: 400px;
-        min-width: 400px;
-      }
-
-      .nav-item{
-        margin: 3px 3px 3px 3px;
-        transition: 0.25s ease-in all;
-      }
-
-      .nav-item:hover { 
-        transform: scale(1.05);
-      }
-
-    /* end navigation */
+#tribute-link{
+  text-decoration: underline;
+}
 
 
-    /* start splashscreen */
-
-      .container{
-        margin-top: 0px;
-        width: 100%;
-        height: 1000px;
-        display: grid;
-        grid-template-columns: 20% 20% 20% 20% 20%;
-        grid-template-rows: 25% 25% 25% 25%;
-        grid-gap: 10px;
-        grid-template-areas: 
-        "header header header header header"
-        "content content content content content"
-        "content content content content content"
-        "content content content content content"
-        "content content content content content"
-
-      }
-
-      .item-header{
-        grid-area: 1/1/2/4;
-      }  
-
-      .item-red-badge{
-        grid-area: 2/1/3/2;
-        z-index: -1;
-      }
-
-      .item-red-badge-animation{
-        animation-name: infinite-spinning;
-        animation-duration: 60s;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
-        transform-origin: center;
-      }
-
-      .item-grey-badge{
-        grid-area: 2/5/3/6;
-      }
-
-      .item-grey-badge-animation{
-        animation-name: infinite-spinning;
-        animation-duration: 90s;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
-        transform-origin: center;
-      }
-
-      .item-yellow-badge{
-        grid-area: 3/3/5/6;
-        z-index: -3;  
-      }
-
-      .item-yellow-badge-animation{
-        animation-name: infinite-spinning;
-        animation-duration: 45s;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
-        transform-origin: center;
-      }
-
-      .item-token-1{
-        grid-area: 1/4/2/5;
-      }
-
-      .item-token-1-animation{
-        animation-name: infinite-spinning;
-        animation-duration: 80s;
-        animation-iteration-count: infinite;
-        animation-timing-function: ease;
-        transform-origin: center;        
-      }
-
-      @keyframes infinite-spinning {
-        from {
-        transform: rotate(0deg);
-          }
-        to {
-        transform: rotate(360deg);
-          }
-        }
-
-      .item-metro-1{
-        grid-area: 3/2/4/5;  
-      }
-
-      .item-metro-1-animation{
-      transform-origin: 200% center; 
-      position:relative; 
-      animation: rotate-metro-one 30s linear infinite; 
-      z-index: -2;
-      }
-
-      item-metro-1-animation:before { 
-      content:''; 
-      position: absolute; 
-      animation: rotate-metro-one 30s linear reverse infinite; 
-      }
-
-      @keyframes rotate-metro-one { 
-        100% { 
-        transform:rotate(360deg); 
-        } 
-      }
-
-      .item-metro-2{
-        grid-area:3/4/5/6;  
-      }
-
-      .item-metro-2-animation { 
-      margin-top: 150px;
-      transform-origin: 200% center; 
-      position:relative; 
-      animation: rotate-metro-two 50s linear infinite; 
-      }
-
-      item-metro-2-animation:before { 
-      content:''; 
-      position: absolute; 
-      animation: rotate-metro-two 50s linear reverse infinite; 
-      }
-
-      @keyframes rotate-metro-two { 
-        100% { 
-        transform:rotate(-360deg); 
-        } 
-      }
+/*end code for freecodecamp*/
 
 
-      /* end splashscreen */
+body{
+  background-color: black; 
+  overflow-x: hidden;
+}
+
+h1{
+  font-family: Helvetica Neue LT Std, Helvetica;
+  color: white;
+  margin-left: 25px;
+  margin-top: 12px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 120px;
+  line-height: 95%;
+  text-shadow: rgb(0,0,0,0.5) 1px 0 15px;
+
+}
+
+h2{
+  font-family: Helvetica Neue LT Std, Helvetica;
+  color: white;
+  height: 56px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 70px;
+  line-height: 110%;
+  text-align: center;
+}
+
+p{
+  font-family: Helvetica Neue LT Std, Helvetica;
+  color: white;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 160%;
+}
+
+.div-text {
+  display: center;
+  text-align: left;
+  
+}
+
+.div-image{
+  display: center;
+  text-align: center;
+}
+
+.image-resp{
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  display: center;
+  padding-top: 90px;
+  padding-bottom: 50px;
+}
+
+
+/* start responsive */
+
+@media screen and (min-width: 300px) and (max-width: 800px) { 
+  .div-text {
+    margin-left: 5%;
+    margin-right: 5%;
+    } 
+  } 
+
+@media screen and (min-width: 801px) and (max-width: 1400px) { 
+  .div-text {
+    margin-left: 20%;
+    margin-right: 20%;
+    } 
+  }
+
+@media screen and (min-width: 1401px) { 
+  .div-text {
+    margin-left: 30%;
+    margin-right: 30%;
+    } 
+  }
+
+/* end responsive */
+
+
+/* start navigation */
+
+nav{
+  position: fixed;
+  margin-top: calc(100vh - 200px);
+  max-width: 400px;
+  min-width: 400px;
+}
+
+.nav-item{
+  margin: 3px 3px 3px 3px;
+  transition: 0.25s ease-in all;
+}
+
+.nav-item:hover { 
+  transform: scale(1.05);
+}
+
+/* end navigation */
+
+
+/* start splashscreen */
+
+.container{
+  margin-top: 0px;
+  width: 100%;
+  height: 1000px;
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: 25% 25% 25% 25%;
+  grid-gap: 10px;
+  grid-template-areas: 
+  "header header header header header"
+  "content content content content content"
+  "content content content content content"
+  "content content content content content"
+  "content content content content content"
+
+}
+
+.item-header{
+  grid-area: 1/1/2/4;
+}  
+
+.item-red-badge{
+  grid-area: 2/1/3/2;
+  z-index: -1;
+}
+
+.item-red-badge-animation{
+  animation-name: infinite-spinning;
+  animation-duration: 60s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform-origin: center;
+}
+
+.item-grey-badge{
+  grid-area: 2/5/3/6;
+}
+
+.item-grey-badge-animation{
+  animation-name: infinite-spinning;
+  animation-duration: 90s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform-origin: center;
+}
+
+.item-yellow-badge{
+  grid-area: 3/3/5/6;
+  z-index: -3;  
+}
+
+.item-yellow-badge-animation{
+  animation-name: infinite-spinning;
+  animation-duration: 45s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform-origin: center;
+}
+
+.item-token-1{
+  grid-area: 1/4/2/5;
+}
+
+.item-token-1-animation{
+  animation-name: infinite-spinning;
+  animation-duration: 80s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+  transform-origin: center;        
+}
+
+@keyframes infinite-spinning {
+  from {
+  transform: rotate(0deg);
+    }
+  to {
+  transform: rotate(360deg);
+    }
+  }
+
+.item-metro-1{
+  grid-area: 3/2/4/5;  
+}
+
+.item-metro-1-animation{
+transform-origin: 200% center; 
+position:relative; 
+animation: rotate-metro-one 30s linear infinite; 
+z-index: -2;
+}
+
+item-metro-1-animation:before { 
+content:''; 
+position: absolute; 
+animation: rotate-metro-one 30s linear reverse infinite; 
+}
+
+@keyframes rotate-metro-one { 
+  100% { 
+  transform:rotate(360deg); 
+  } 
+}
+
+.item-metro-2{
+  grid-area:3/4/5/6;  
+}
+
+.item-metro-2-animation { 
+margin-top: 150px;
+transform-origin: 200% center; 
+position:relative; 
+animation: rotate-metro-two 50s linear infinite; 
+}
+
+item-metro-2-animation:before { 
+content:''; 
+position: absolute; 
+animation: rotate-metro-two 50s linear reverse infinite; 
+}
+
+@keyframes rotate-metro-two { 
+  100% { 
+  transform:rotate(-360deg); 
+  } 
+}
+
+
+/* end splashscreen */
 
 
 
