@@ -292,7 +292,7 @@ animation: rotate-metro-two 50s linear reverse infinite;
 
 /* start responsive */
 
-@media only screen and (min-width: 300px) and (max-width: 800px) { 
+@media screen and (min-width: 300px) and (max-width: 800px) { 
   .div-text {
     margin-left: 5%;
     margin-right: 5%;
