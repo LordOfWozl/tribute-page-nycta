@@ -66,8 +66,13 @@
 
 #tribute-link{
   text-decoration: underline;
+  color: #00FF00;
 }
 
+#tribute-link-2{
+  text-decoration: underline;
+  color: #00FF00;
+}
 
 /*end code for freecodecamp*/
 
@@ -131,31 +136,6 @@ p{
 }
 
 
-/* start responsive */
-
-@media screen and (min-width: 300px) and (max-width: 800px) { 
-  .div-text {
-    margin-left: 5%;
-    margin-right: 5%;
-    font-size: 20px;
-    } 
-  } 
-
-@media screen and (min-width: 801px) and (max-width: 1400px) { 
-  .div-text {
-    margin-left: 20%;
-    margin-right: 20%;
-    } 
-  }
-
-@media screen and (min-width: 1401px) { 
-  .div-text {
-    margin-left: 30%;
-    margin-right: 30%;
-    } 
-  }
-
-/* end responsive */
 
 
 /* start navigation */
@@ -309,6 +289,35 @@ animation: rotate-metro-two 50s linear reverse infinite;
 
 
 /* end splashscreen */
+
+/* start responsive */
+
+@media only screen and (min-width: 300px) and (max-width: 800px) { 
+  .div-text {
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 20px;
+    } 
+  h1{
+  font-size: 80px;
+  }
+  } 
+
+@media screen and (min-width: 801px) and (max-width: 1400px) { 
+  .div-text {
+    margin-left: 20%;
+    margin-right: 20%;
+    } 
+  }
+
+@media screen and (min-width: 1401px) { 
+  .div-text {
+    margin-left: 30%;
+    margin-right: 30%;
+    } 
+  }
+
+/* end responsive */
 
 
 
